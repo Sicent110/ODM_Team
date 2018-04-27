@@ -29,10 +29,7 @@
                 <ul class="nav nav-tabs">
                     <li class="active">
                          <a href="#panel-621286" data-toggle="tab">登录</a>
-                    </li>
-                    <li>
-                         <a href="#panel-390931" data-toggle="tab">注册</a>
-                    </li>
+                    </li>                
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="panel-621286">
@@ -41,7 +38,7 @@
                         <?php echo form_open('login/signin_submit'); ?>
                         <!-- <form class="form-horizontal" role="form"> -->
                           <div class="form-group">
-                             <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
+                             <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
                             <div class="col-sm-10">
                               <input class="form-control" id="inputEmail3" type="text"  name="username" value="<?=set_value('username')?>"/>
                             </div>
@@ -49,7 +46,7 @@
                           <br/>
                           <br/>
                           <div class="form-group">
-                             <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                             <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
                             <div class="col-sm-10">
                               <input class="form-control" id="inputPassword3" type="password" name="password" value="<?=set_value('username')?>"/>
                             </div>
@@ -57,13 +54,13 @@
                           <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                               <div class="checkbox">
-                                 <label><input type="checkbox" />Remember me</label>
+                                 <label><input type="checkbox" />记住密码</label>
                               </div>
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                              <input class="btn btn-default" type="submit" name="submit" value="signin">
+                              <input class="btn btn-default" type="submit" name="submit" value="登录">
                                <!-- <button type="submit" class="btn btn-primary" value="signin">Sign in</button>
                                <button type="submit" class="btn btn-default" value="signup">Sign up</button> -->
                             </div>
@@ -73,46 +70,13 @@
                     </div>
                     <div class="tab-pane" id="panel-390931">
 
-                        <?php echo validation_errors(); ?>
-                        <?php echo form_open('login/signup_submit'); ?>
-                        <!-- <form class="form-horizontal" role="form"> -->
-                          <div class="form-group">
-                             <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" id="inputEmail4" type="text"  name="username" value="<?=set_value('username')?>"/>
-                            </div>
-                          </div>
-                          <br/>
-                          <br/>
-                          <div class="form-group">
-                             <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" id="inputPassword4" type="password" name="password" value="<?=set_value('username')?>"/>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                              
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                              <br>
-                              <input class="btn btn-default" type="submit" name="submit" value="signup">
-                               <!-- <button type="submit" class="btn btn-primary" value="signin">Sign in</button>
-                               <button type="submit" class="btn btn-default" value="signup">Sign up</button> -->
-                            </div>
-                          </div>
-                        </form>
+                        
+                        
 
                     </div>
                 </div>
             </div>
-
-
-          
-
-
+         
         </div>
         <div class="col-md-4 column">
         </div>
