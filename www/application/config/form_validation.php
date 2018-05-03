@@ -4,8 +4,8 @@ $username_rules = array('field' => 'username', 'label' => 'Username', 'rules' =>
 
 $config = array(
     'signin'=>array(
-        array('field' => 'username', 'label' => 'Username', 'rules' => 'required|trim|min_length[3]|max_length[18]',),
-        array('field' => 'password', 'label' => 'Password', 'rules' => 'required|trim|min_length[3]|max_length[18]',),
+        array('field' => 'username', 'label' => '用户名', 'rules' => 'required|trim|min_length[3]|max_length[18]',),
+        array('field' => 'password', 'label' => '密码', 'rules' => 'required|trim|min_length[3]|max_length[18]',),
     ),
     'project'=>array(
         array('field' => 'projectid', 'label' => 'Projectid', 'rules' => 'required|trim|integer',),

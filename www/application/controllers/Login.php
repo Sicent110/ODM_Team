@@ -11,10 +11,13 @@ class Login extends MyController {
         $this->config->load('meta');
         $this->load->library('form_validation');
     }
+    //登录入口
     public function signin() {
         $data['site_name'] = SITE_NAME;
         $this->_render_signin($data);
     }
+
+   //输入用户名和密码正确之后的登录处理
     public function signin_submit() {
         $data['site_name'] = SITE_NAME;
         $this->load->model('user_model');
@@ -49,6 +52,8 @@ class Login extends MyController {
 
         } 
     }
+
+/*
     public function signup_submit(){
         $this->load->model('user_model');
 
@@ -73,12 +78,17 @@ class Login extends MyController {
         // echo '<meta http-equiv="refresh" content="3;URL='.site_url('teamwork/signin').'> '."注册成功！3秒后自动跳转 ";
         echo '<a href="'.site_url('signin').'"> '."注册成功！点击重新登录 ".'</a>';
     }
+    */
+
+    //登录显示页面
     private function _render_signin($data){
         $this->load->view('templates/header', $data);
         // $this->load->view('teamwork/_project_header', $data);
         $this->load->view('teamwork/login', $data);
         $this->load->view('templates/footer', $data);
     }
+
+
     public function signout(){
         $this->session->sess_destroy();
         // $this->_render_signin($data);
