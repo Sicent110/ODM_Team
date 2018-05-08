@@ -183,7 +183,13 @@ $(function() {
 
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
-                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="<?=site_url('project/lists')?>"> 
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button> 
+                    <a class="navbar-brand" href="<?=site_url('project/lists')?>"> 
                     <?php echo ucfirst($site_name); ?>
                     </a>
                 </div>
@@ -265,18 +271,18 @@ $(function() {
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">设置<strong class="caret"></strong></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                     <a href="#">个人资料</a>
+                                     <a href="#">账号设置</a>
                                 </li>
                                 <li>
-                                     <a href="#">Another action</a>
+                                     <a href="#">使用帮助</a>
                                 </li>
                                 <li>
-                                     <a href="#">Something else here</a>
+                                     <a href="#">皮肤</a>
                                 </li>
                                 <li class="divider">
                                 </li>
                                 <li>
-                                     <a href="#">Separated link</a>
+                                     <a href="#">权限设置</a>
                                 </li>
                             </ul>
                         </li>

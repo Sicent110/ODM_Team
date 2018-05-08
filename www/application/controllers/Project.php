@@ -32,10 +32,11 @@ class Project extends MyController{
 
         $this->load->view('templates/header', $data);
         $this->load->view('teamwork/_project_header', $data);
-        $this->load->view('teamwork/projects', $data);
-        $this->load->view('teamwork/_modals', $data);
+       $this->load->view('teamwork/projects', $data);
+      // $this->load->view('teamwork/_modals', $data);
         $this->load->view('templates/footer', $data);
     }
+    
     function show(){
         //检查用户是否属于此项目
         //...
@@ -208,12 +209,14 @@ class Project extends MyController{
         redirect('project/show?projectid='.$projectid);
     }
 
+    //删除一个项目
+  
     function del(){
         $userid = $this->userdata['userid'];
         
         $this->load->model('project_model');
         $method = 'get';
-        $projectid = $this->input->$method('projectid');
+        $projectid = $this->input->$method('projectid');//返回post和get，并且是大写的形式
 
         $this->form_validation->set_data(array(
             'projectid'=>$projectid,

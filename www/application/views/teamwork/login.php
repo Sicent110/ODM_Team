@@ -3,20 +3,31 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
 
+
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
+                  <!--
                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
                       <span class="sr-only">Toggle navigation</span>
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button> 
+                  -->
+                  <span class="navbar-brand">
+                    <?php echo ucfirst($site_name); ?>
+                  </span>
+                  <!--
                      <a class="navbar-brand" href="<?php base_url(); ?>home"> 
                        <?php echo ucfirst($site_name); ?>
                     </a>
+                  -->
                 </div>
+
+                <!--
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 </div>
+              -->
             </nav>
 
 
@@ -28,15 +39,20 @@
         </div>
         <div class="col-md-6 column">
 
-
+<!--
             <div class="tabbable" id="tabs-261036">
+            
+              
                 <ul class="nav nav-tabs">
                     <li class="active">
                          <a href="#panel-621286" data-toggle="tab">登录</a>
                     </li>                
                 </ul>
+             
+    
                 <div class="tab-content">
                     <div class="tab-pane active" id="panel-621286">
+                    -->
 
                         <?php echo validation_errors(); ?>
                         <?php echo form_open('login/signin_submit'); ?>
@@ -64,22 +80,24 @@
                           </div>
                           <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                              <input class="btn btn-default" type="submit" name="submit" value="登录">
+                              <input class="btn btn-default" type="submit" name="submit" value="登录" />
                                <!-- <button type="submit" class="btn btn-primary" value="signin">Sign in</button>
                                <button type="submit" class="btn btn-default" value="signup">Sign up</button> -->
                             </div>
                           </div>
                         </form>
 
-                    </div>
-                    <div class="tab-pane" id="panel-390931">
 
-                        
-                        
+                   </div>
+                  
+ 
+                    <div class="tab-pane" id="panel-390931">                                        
+                   </div>
+                 
 
-                    </div>
                 </div>
             </div>
+          
          
         </div>
         <div class="col-md-4 column">
