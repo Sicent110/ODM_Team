@@ -19,21 +19,21 @@ class Project extends MyController{
 
         $project_infos = $this->project_model->get_projects_by_userid($userid);
 
-        if (false){
+        if (empty($project_infos)){   //需要判断查询到的项目返回结果是不是空数组
             $data['projects'] = array();
             $data['error'] = $ret['res'];
             
         }else{
-            $data['projects'] = $project_infos;
+            $data['projects'] = $project_infos;//$data["projects"]存储的就是所有的项目
         }
 
-        $data['userinfo'] = $this->user_model->get_one(array('id'=>$userid));
-        $data['is_project_lists_page'] = true;
+        $data['userinfo'] = $this->user_model->get_one(array('id'=>$userid));//得到这个用户的完整信息，包括password等等
+        $data['is_project_lists_page'] = true;//这和后面是否生产相关页面有关，是不是项目列表的页面
 
         $this->load->view('templates/header', $data);
         $this->load->view('teamwork/_project_header', $data);
        $this->load->view('teamwork/projects', $data);
-      // $this->load->view('teamwork/_modals', $data);
+       $this->load->view('teamwork/_modals', $data);//这里和添加新项目有关
         $this->load->view('templates/footer', $data);
     }
     

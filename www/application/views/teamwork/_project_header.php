@@ -195,6 +195,7 @@ $(function() {
                 </div>
                 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                     <ul class="nav navbar-nav">
                         <!-- <li class="active">
                              <a href="#">Link</a>
@@ -202,13 +203,14 @@ $(function() {
                         <li>
                              <a href="#">Link</a>
                         </li> -->
+
                         <li class="dropdown active" >
-                            <?php if (isset($projectinfo)): ?>
+                            <?php if (isset($projectinfo)): ?>  <!--先要判断变量projectinfo是否设置过-->
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?=$projectinfo['projectname']?><strong class="caret"></strong></a>
                                 <script type="text/javascript">window.projectid=<?=$projectinfo['id']?></script>
                             <?php endif; ?>
                             <ul class="dropdown-menu">
-                                <?php foreach ($otherprojects as $projectinfo): ?>
+                                <?php foreach ($otherprojects as $projectinfo): ?> <!--如果没有otherprojects就不会显示， -->
                                     <li>
                                          <a href="<?=site_url('project/show?projectid='.strval($projectinfo['id']))?>"><?=$projectinfo['projectname']?></a>
                                     </li>
@@ -217,7 +219,7 @@ $(function() {
                             </ul>
                         </li>
 
-                        <?php if (!isset($is_project_lists_page)): ?>
+                        <?php if (!isset($is_project_lists_page)): ?>  <!--需要判断是不是项目列表页面，之前在project/lists中的is_project_lists_page是true-->
                         <li class="dropdown" >
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">添加<strong class="caret"></strong></a>
                             <ul class="dropdown-menu">
@@ -253,12 +255,14 @@ $(function() {
                                 <li>
                                      <a href="#">个人资料</a>
                                 </li>
-                                <!-- <li>
+                                <!--
+                                 <li>
                                      <a href="#">Another action</a>
                                 </li>
                                 <li>
                                      <a href="#">Something else here</a>
-                                </li> -->
+                                </li> 
+                            -->
                                 <li class="divider">
                                 </li>       
                                 <li>
@@ -268,7 +272,8 @@ $(function() {
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">设置<strong class="caret"></strong></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">设置<strong class="caret"></strong></a> 
+                            <!-- data-toggle这个属性是指示列表 -->
                             <ul class="dropdown-menu">
                                 <li>
                                      <a href="#">账号设置</a>
@@ -279,7 +284,7 @@ $(function() {
                                 <li>
                                      <a href="#">皮肤</a>
                                 </li>
-                                <li class="divider">
+                                <li class="divider"> <!--这里是在下拉列表中设置一条横线 -->
                                 </li>
                                 <li>
                                      <a href="#">权限设置</a>

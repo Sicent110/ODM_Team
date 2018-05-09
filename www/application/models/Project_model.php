@@ -56,7 +56,7 @@ class Project_model extends MyModel {
 SELECT *
 FROM  project
 WHERE id IN (SELECT projectid FROM project_actor WHERE actorid = '.strval($userid).')');
-        return $query->result_array();
+        return $query->result_array();//返回一个数组，数组中的每个元素都是数组，然后每个元素数组都是一条数据
 
     }
     function add_actor($userid,$projectid){
